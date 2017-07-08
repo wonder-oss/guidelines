@@ -5,7 +5,7 @@
 > Aqui está presente uma lista de diretrizes que nós achamos, escrevemos ou reunimos e que achamos que funcionam bem com os projetos de Ruby on Rails da [Wonder Sistemas](http://www.wonder.com.br).
 
 - [Git](#git)
-- [Documentações](#documentation)
+- [Documentação](#documentation)
 - [Ambientes de Sistema](#environments)
 - [Testes](#testing)
 - [Estrutura de Projeto](#structure-and-naming)
@@ -62,3 +62,15 @@ Nós usamos o fluxo de [branch por funcionalidade](./branch_workflow.md) com [re
 * Antes de fazer um PR, assegure-se de que seu branch pode ser compilado e que passe nos testes automatizados.
 * Utilize [esse arquivo de .gitignore](./.gitignore).
 * Comentários de commit devem estar em português.
+
+## 2. Documentação <a name="documentation"></a>
+
+* Use esse [template](./README.sample.md) para o `README.md` do projeto.
+* Para projetos com mais de um repositório direcionar para os seus arquivos de `README.md`.
+* Manter o `README.md` atualizado ao à medida que o projeto evolui.
+* Comentar pequenas porções de código quando achar que o código não é autoexplicativo.
+* Comentar o código quando pertencer a uma biblioteca de funções que vai pode ser utilizada por múltiplos desenvolvedores.
+* Manter os comentários de código relevantes à medida que o código evolui.
+
+---
+Estas diretrizes foram baseadas em [wearehive/project-guidelines](https://github.com/wearehive/project-guidelines).
