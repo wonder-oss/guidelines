@@ -2,7 +2,7 @@
 ![Wonder Sistemas Logo](./logo.png)
 
 # Diretrizes de Projetos Ruby
-> Aqui está presente uma lista de diretrizes que nós achamos, escrevemos ou reunimos e que achamos que funcionam bem com os projetos de Ruby on Rails da [Wonder Sistemas](http://www.wonder.com.br).
+> Lista de diretrizes que nós achamos, escrevemos ou reunimos e que achamos que funcionam bem com os projetos Ruby on Rails da [Wonder Sistemas](http://www.wonder.com.br).
 
 - [Git](#git)
 - [Documentação](#documentation)
@@ -15,7 +15,7 @@
 ## 1. Git <a name="git"></a>
 
 ### 1.1 Fluxo do Git
-Nós usamos o fluxo de [branch por funcionalidade](./branch_workflow.md) com [rebasing interativo](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing) e usamos um branch master que é o branch de desenvolvimento. Os passos básicos são os seguintes:
+Nós usamos o fluxo de [branch por funcionalidade](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow) com [rebasing interativo](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing) e usamos um branch master que é o branch de desenvolvimento. Os passos básicos são os seguintes:
 
 * Criar um novo branch com uma nova funcionalidade/correção
     ```
@@ -67,10 +67,10 @@ Nós usamos o fluxo de [branch por funcionalidade](./branch_workflow.md) com [re
 
 * Use esse [template](./README.sample.md) para o `README.md` do projeto.
 * Para projetos com mais de um repositório direcionar para os seus arquivos de `README.md`.
-* Manter o `README.md` atualizado ao à medida que o projeto evolui.
+* Manter o `README.md` atualizado à medida que o projeto evolui.
 * Comentar pequenas porções de código quando achar que o código não é autoexplicativo.
-* Comentar o código quando pertencer a uma biblioteca de funções que vai pode ser utilizada por múltiplos desenvolvedores.
-* Manter os comentários de código relevantes à medida que o código evolui.
+* Comentar o código quando pertencer a uma biblioteca de funções que pode ser utilizada por múltiplos projetos.
+* Manter os comentários de código atualizados à medida que o código evolui.
 
 ---
 Estas diretrizes foram baseadas em [wearehive/project-guidelines](https://github.com/wearehive/project-guidelines).

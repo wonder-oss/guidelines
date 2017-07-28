@@ -29,6 +29,7 @@
 
 # Variáveis de Ambiente locais
 .env
+.env.*
 
 # Ignore IDE files
 /.idea
@@ -47,8 +48,39 @@ dump.rdb
 # Pacotes de javascript compilados do webpack
 /public/packs
 
-# Módulos de javascript
+# Diretório de dependências
 /node_modules
+/jspm_packages
+/bower_components
+
+# NPM
+.npm
+npm-debug.log*
+
+# Yarn
+.yarn-integrity
+yarn-debug.log*
+yarn-error.log*
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### SublimeText ###
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# workspace files are user-specific
+*.sublime-workspace
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
 
 # Arquivos específicos de cada projeto
 # ...
