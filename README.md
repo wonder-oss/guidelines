@@ -1,5 +1,5 @@
 
-![Wonder Sistemas Logo](./logo.png)
+![Wonder Sistemas Logo](/images/logo.png)
 
 # Diretrizes de Projetos Ruby
 > Lista de diretrizes que nós achamos, escrevemos ou reunimos e que achamos que funcionam bem com os projetos Ruby on Rails da [Wonder Sistemas](http://www.wonder.com.br).
@@ -7,12 +7,12 @@
 - [Git](#git)
 - [Documentação](#documentation)
 - [Ambientes de Sistema](#environments)
-- [Testes](#testing)
-- [Estrutura de Projeto](#structure-and-naming)
+- [Testes](#tests)
 - [Estilo de Código](#code-style)
-- [API Design](#api-design)
+- [API](#api)
 
 ## 1. Git <a name="git"></a>
+![Git](/images/git.png)
 
 ### 1.1 Fluxo do Git
 Nós usamos o fluxo de [branch por funcionalidade](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow) com [rebasing interativo](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing) e usamos um branch master que é o branch de desenvolvimento. Os passos básicos são os seguintes:
@@ -64,6 +64,7 @@ Nós usamos o fluxo de [branch por funcionalidade](https://www.atlassian.com/git
 * Comentários de commit devem estar em português.
 
 ## 2. Documentação <a name="documentation"></a>
+![Documentação](/images/documentation.png)
 
 * Use esse [template](./README.sample.md) para o `README.md` do projeto.
 * Para projetos com mais de um repositório direcionar para os seus arquivos de `README.md`.
@@ -72,5 +73,16 @@ Nós usamos o fluxo de [branch por funcionalidade](https://www.atlassian.com/git
 * Comentar o código quando pertencer a uma biblioteca de funções que pode ser utilizada por múltiplos projetos.
 * Manter os comentários de código atualizados à medida que o código evolui.
 
+## 3. Ambientes de Sistema <a name="environments"></a>
+![Ambientes de Sistema](/images/environment.png)
+
+## 4. Testes <a name="tests"></a>
+![Testes](/images/testing.png)
+
+## 5. Estilo de Código <a name="code-style"></a>
+![Estilo de Código](/images/code-style.png)
+
+## 6. API <a name="api"></a>
+![API](/images/api.png)
 ---
 Estas diretrizes foram baseadas em [wearehive/project-guidelines](https://github.com/wearehive/project-guidelines).
