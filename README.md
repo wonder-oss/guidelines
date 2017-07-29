@@ -82,7 +82,65 @@ Nós usamos o fluxo de [branch por funcionalidade](https://www.atlassian.com/git
 ## 5. Estilo de Código <a name="code-style"></a>
 ![Estilo de Código](/images/code-style.png)
 
+- É recomendado utilizar algum plugin de análise automática para seu editor de texto para forçar as boas práticas em tempo de código.
+- Reforçar o mesmo estilo de código nas aplicações para que todo o time siga as mesmas métricas.
+
+### 5.1. Ruby
+
+Utilize as métricas de código da gem [Wonder-Ruby-Style](https://github.com/wondersistemas/wonder-ruby-style).
+
+### 5.2. Javascript/Ecmascript/Typescript
+
+Utilize eslint/tslint para reforçar métricas comuns da comunidade.
+Utilize identação de 2 espaços para cada nível.
+
+### 5.3. CSS/SCSS/LESS
+
+Utilize csslint para reforçar métricas comuns da comunidade.
+Utilize identação de 2 espaços para cada nível.
+Utilize [CSS orientado à objetos](http://thesassway.com/intermediate/using-object-oriented-css-with-sass) como padrão de arquitetura.
+
 ## 6. API <a name="api"></a>
 ![API](/images/api.png)
+
+### 6.1. Versionamento
+
+O padrão de versionamento de API deve seguir os modelos abaixo e estar prefixado com `v` (ex: v1, v2) e deve estar no escopo mais alto da URL, esta forma facilita a manutenibilidade das versões e mudanças na API incompatíveis com clientes que ainda utilizam versões mais antigas.
+
+`www.site.com/api/v1/users`
+`api.site.com/v1/users`
+
+### 6.2. API Design
+
+Url's devem conter nomes no plural quando se trata de coleções de dados.
+
+`/api/v1/usuarios`
+`/api/v1/oportunidades`
+
+Use *snake_case* para palavras compostas ou combinações de palavras.
+
+`/api/v1/sessoes_usuario`
+`/api/v1/anexos?nao_enviados=1`
+
+Nunca crie url's que apontam diretamente para uma propriedade de uma coleção.
+
+`/api/v1/anexos/10/descricao`
+
+Use verbos quando url's não tem objetivo de operar com coleções, mas que executam alguma operação.
+
+`/api/v1/emails/enviar`
+
+Não utilize '/update_user' ou '/add_user', ao invés disso disponha das funcionalidades CRUD utilizando métodos HTTP.
+
+> **GET**: Retorna uma representação de uma coleção ou recurso
+
+> **POST**: Cria um recurso ou sub-recurso
+
+> **PUT**: Atualiza recursos existentes
+
+> **PATCH**: Atualiza recursos existentes. Apenas atualiza campos que foram inseridos, deixando os outros como estão
+
+> **DELETE**:	Exclui recursos existentes
+
 ---
 Estas diretrizes foram baseadas em [wearehive/project-guidelines](https://github.com/wearehive/project-guidelines).
