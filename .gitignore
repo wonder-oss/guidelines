@@ -25,6 +25,8 @@
 
 # Assets Compilados
 /public/assets
+/public/packs
+/public/packs-test
 /public/probus-server/
 
 # Variáveis de Ambiente locais
