@@ -142,5 +142,33 @@ Não utilize '/update_user' ou '/add_user', ao invés disso disponha das funcion
 
 > **DELETE**:	Exclui recursos existentes
 
+Utilizar código de status http para respostas da api.
+
+> [`200`](https://httpstatuses.com/200) OK - Resposta para um GET, PUT, PATCH ou DELETE que foi bem sucedido. Serve para POST que não resultou em uma criação de um objeto novo.
+
+> [`201`](https://httpstatuses.com/201) Created - Resposta para um POST bem sucedido que resultou em um objeto criado. Deve ser acompanhado por um header contendo a url do novo objeto criado.
+
+> [`204`](https://httpstatuses.com/204) No Content - Reposta para uma requisição bem sucedida que não retorna informação no body.
+
+> [`304`](https://httpstatuses.com/304) Not Modified - Usado quando o cache entrou em ação e não houve necessidade do servidor enviar uma resposta que já é valida pelo cliente, equivalente ao 200 em que o retorno foi feito pelo cache.
+
+> [`400`](https://httpstatuses.com/400) Bad Request - A requisição está mal formada, por exemplo: se o conteúdo do body não pode ser interpretado.
+
+> [`401`](https://httpstatuses.com/401) Unauthorized - Quando a autenticação de usuário falhou ou não havia dados de autenticação.
+
+> [`403`](https://httpstatuses.com/403) Forbidden - Quanto a antenticação foi bem sucedida mas o usuário autenticado não possui  acesso ao recurso.
+
+> [`404`](https://httpstatuses.com/404) Not Found - Quando a requisição não encontra o recurso.
+
+> [`405`](https://httpstatuses.com/405) Method Not Allowed - Quando um usuário não possui acesso ao método HTTP que está sendo usado.
+
+> [`410`](https://httpstatuses.com/410) Gone - Indica que o recurso nesse endpoint não está mais disponível. Útil como resposta de endpoints que já foram depreciados.
+
+> [`415`](https://httpstatuses.com/415) Unsupported Media Type - Se o content-type informado na request for incorreto
+
+> [`422`](https://httpstatuses.com/422) Unprocessable Entity - Quando ocorre um erro de validação do objeto.
+
+> [`429`](https://httpstatuses.com/429) Too Many Requests - Quando uma request é rejeitada porque a quantidade de requests atingiu o limite.
+
 ---
 Estas diretrizes foram baseadas em [wearehive/project-guidelines](https://github.com/wearehive/project-guidelines).
