@@ -10,7 +10,8 @@ Sumário
 - [3.3 node / npm](#3.3)
 - [3.4 Yarn](#3.4)
 - [3.5 PostgreSQL](#3.5)
-- [3.6 Docker](#3.6)
+- [3.6 Oracle](#3.6)
+- [3.7 Docker](#3.7)
 
 ## 3.1 Ruby <a name="3.1"></a>
 
@@ -82,7 +83,29 @@ sudo apt update && sudo apt -fy install postgresql postgresql-common postgresql-
 sudo -u postgres createuser $USER -s
 ```
 
-## 3.6 Docker <a name="3.6"></a>
+## 3.6 Oracle <a name="3.6"></a>
+
+Adicionar variáveis de ambiente (bash, zsh, ...etc)
+
+```bash
+export ORACLE_HOME=/opt/oracle/instantclient
+export LD_LIBRARY_PATH=$ORACLE_HOME:$LD_LIBRARY_PATH
+```
+
+```bash
+sudo apt install curl libaio1 -fy
+curl --compressed http://s3.amazonaws.com/probus.wonder.com.br/docker/oracle/instantclient_12_1.tar.gz > /tmp/instantclient.tar.gz
+tar xzf /tmp/instantclient.tar.gz -C /tmp/
+sudo mkdir -p $ORACLE_HOME
+sudo mv /tmp/instantclient_12_1/* $ORACLE_HOME/
+sudo chown -R $USER:${GROUP:-$USER} $ORACLE_HOME
+chmod 755 $ORACLE_HOME
+ln -s $ORACLE_HOME/libclntsh.so.12.1 $ORACLE_HOME/libclntsh.so
+ln -s $ORACLE_HOME/libclntshcore.so.12.1 $ORACLE_HOME/libclntshcore.so
+ln -s $ORACLE_HOME/libocci.so.12.1 $ORACLE_HOME/libocci.so
+```
+
+## 3.7 Docker <a name="3.7"></a>
 
 ```bash
 sudo apt install -fy curl apt-transport-https ca-certificates gnupg2 software-properties-common
